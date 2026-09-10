@@ -1,0 +1,8 @@
+[Unit]
+Description=Automount personal
+
+[Automount]
+Where=/mnt/personal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[org.gnome.shell.extensions.simple-weather]
+always-packaged-icons=false
+is-activated=true
+locations=['{"name":"Palatine","lat":42.1105502,"lon":-88.0434304,"cc":"us"}']
+main-location-index=int64 0
+panel-box='center'
+panel-offset=50.0
+secondary-panel-detail='conditionText'
+show-refresh-button=true
+symbolic-icons-panel=false
+unit-preset='us'

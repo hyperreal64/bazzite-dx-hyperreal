@@ -1,0 +1,8 @@
+[Unit]
+Description=Automount videos
+
+[Automount]
+Where=/mnt/videos
+
+[Install]
+WantedBy=multi-user.target

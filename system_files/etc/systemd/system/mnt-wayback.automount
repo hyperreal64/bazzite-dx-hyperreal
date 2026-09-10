@@ -1,0 +1,8 @@
+[Unit]
+Description=Automount wayback
+
+[Automount]
+Where=/mnt/wayback
+
+[Install]
+WantedBy=multi-user.target

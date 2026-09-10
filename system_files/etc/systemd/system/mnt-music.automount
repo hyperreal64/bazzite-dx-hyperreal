@@ -1,0 +1,8 @@
+[Unit]
+Description=Automount music
+
+[Automount]
+Where=/mnt/music
+
+[Install]
+WantedBy=multi-user.target

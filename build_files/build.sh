@@ -13,15 +13,22 @@ cp -avf "/ctx/system_files"/. /
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux
+dnf5 install -y \
+	cronie \
+	neomutt \
+	nfs-utils \
+	pass \
+	prometheus-node-exporter \
+	rpcbind
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# compile gschema overrides
+glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-#### Example for enabling a System Unit File
-
+systemctl disable cups.service
+systemctl disable cups.socket
+systemctl enable docker.service
+systemctl enable mnt-personal.automount
+systemctl enable mnt-wayback.automount
 systemctl enable podman.socket
+systemctl enable prometheus-node-exporter.service
+systemctl enable rpcbind.service

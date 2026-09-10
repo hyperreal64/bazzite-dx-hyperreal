@@ -1,0 +1,3 @@
+[org.gnome.shell]
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'quake-anything@yccoskun.github.io', 'simple-weather@romanlefler.com', 'switcher@landau.fi', 'tailscale-gnome@diskmth.fr', 'timeFromStart@pic16f877ccs.github.com', 'copyous@boerdereinar.dev']
+

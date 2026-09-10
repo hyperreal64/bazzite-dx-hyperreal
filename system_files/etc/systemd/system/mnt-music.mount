@@ -1,0 +1,16 @@
+[Unit]
+Description=music NFS share from NAS
+DefaultDependencies=no
+Conflicts=umount.target
+BindsTo=tailscaled.service
+After=network-online.target remote-fs.target tailscaled.service
+Before=umount.target
+
+[Mount]
+What=truenas-scale.carp-wyvern.ts.net:/mnt/naspool/music
+Where=/mnt/music
+Type=nfs
+Options=defaults
+
+[Install]
+WantedBy=multi-user.target
